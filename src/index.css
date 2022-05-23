@@ -1,13 +1,184 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(
+    to top right,
+    rgb(250, 204, 154),
+    rgba(243, 195, 133, 0.69)
+  );
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 2.75rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+.section-content {
+  text-align: center;
+  margin: 3rem 0rem;
+}
+.line {
+  width: 10rem;
+  height: 0.2rem;
+  background: rgb(84, 79, 79);
+  margin: 0 auto;
+}
+.container {
+  width: 90vw;
+  margin: 5rem auto;
+ 
+}
+.follower {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 4rem;
+ 
+}
+@media screen and(min-width:576px) {
+  .follower {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+.card {
+  background: #fff;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+  flex:1 1 650px
+}
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+.content  {
+  margin:1rem;
+  display:flex;
+  flex-direction: column;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+.content h4{
+    font-size:1.6rem
+}
+.btn{
+    padding:0.4rem 0.8rem;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    background:rgb(234, 110, 65);
+    margin:0.6rem;
+    color: #fff;
+    font-weight: bold;
+    border-radius:0.4rem;
+    border-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:all 0.2s linear;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width:100%
+    
+}
+.btn:hover{
+  background-color: orangered;
+  
+
+
+}
+.ficon{
+    margin:0 1rem
+}
+.btn-container{
+  display: flex;
+  justify-content:center;
+}
+.page-btn{
+  outline: none;
+  border:none;
+  background:transparent;
+  color:#fff;
+   background-color: rgb(243, 73, 11);
+   padding:0.6rem;
+   margin:0 1rem 0 0 ;
+   border-radius: 0.4rem;
+   cursor: pointer;
+
+
+}
+.active-btn{
+  background:rgb(235, 142, 12)
+}
+.prev,.next{
+  margin: 0.2rem;
+  font-family:'Times New Roman', Times, serif ;
+  color:rgb(250, 112, 13);
+  outline:red;
+  border:none;
+  background:transparent;
+  padding:0.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
 }
